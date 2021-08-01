@@ -17,7 +17,9 @@ RUN apt-get upgrade -y
 
 # install python packages
 RUN apt-get install -y python-pip
-RUN pip install --upgrade pip
+# RUN pip install --upgrade pip
+# https://github.com/udacity/CarND-Capstone/issues/348
+RUN pip install --upgrade "pip < 21.0"
 COPY requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 
