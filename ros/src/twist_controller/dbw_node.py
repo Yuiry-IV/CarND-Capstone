@@ -54,7 +54,9 @@ class DBWNode(object):
                                          BrakeCmd, queue_size=1)
 
         # TODO: Adjust `Controller` parameters:
-        self.controller = Controller( 
+        self.controller = Controller(
+                    vehicle_mass  = vehicle_mass,
+                    decel_limit = decel_limit,
                     wheel_radius = wheel_radius, 
                     wheel_base   = wheel_base,
                     steer_ratio  = steer_ratio,
@@ -81,9 +83,13 @@ class DBWNode(object):
                         self.linear_vel,
                         self.angular_vel
                     )
-                    self.publish(throttle, brake, steering)
+                    self.publish(throttle, brake, steering)                    
+                    #rospy.logerr('{:.2f},{:.2f},{:.2f};{:.2f},{:.2f},{:.2f}'.format(self.current_vel,
+                    #    self.linear_vel,
+                    #    self.angular_vel,throttle, brake, steering))
                 else:
                     self.controller.reset()
+                    
             rate.sleep()
 
     def is_operable( self ):
