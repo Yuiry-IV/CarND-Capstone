@@ -71,7 +71,13 @@ class TLDetector(object):
         self.has_image = True
         self.camera_image = msg
         light_wp, state = self.process_traffic_lights()
-
+        cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
+        
+        # rospy.logerr( str(rospy.Time.now())+ ', '+ str(self.lights[0].state) +', ' + str(type(cv_image)) )
+        file_path = '/root/.ros/'+str(self.lights[0].state)+'_'+str(rospy.Time.now())+'.jpg'
+        
+        cv2.imwrite(file_path, cv_image)
+        
         '''
         Publish upcoming red lights at camera frequency.
         Each predicted state has to occur `STATE_COUNT_THRESHOLD` number
