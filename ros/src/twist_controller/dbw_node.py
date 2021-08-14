@@ -84,9 +84,9 @@ class DBWNode(object):
                         self.angular_vel
                     )
                     self.publish(throttle, brake, steering)                    
-                    #rospy.logerr('{:.2f},{:.2f},{:.2f};{:.2f},{:.2f},{:.2f}'.format(self.current_vel,
-                    #    self.linear_vel,
-                    #    self.angular_vel,throttle, brake, steering))
+                    rospy.logdebug('{:.2f},{:.2f},{:.2f};{:.2f},{:.2f},{:.2f}'.format(self.current_vel,
+                        self.linear_vel,
+                        self.angular_vel,throttle, brake, steering))
                 else:
                     self.controller.reset()
                     
@@ -101,6 +101,7 @@ class DBWNode(object):
 
     def velocity_cb (self,msg):
         self.current_vel = msg.twist.linear.x
+        rospy.loginfo(self.current_vel)
 
     def twist_cb (self, msg):
         self.linear_vel = msg.twist.linear.x

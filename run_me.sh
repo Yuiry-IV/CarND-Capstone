@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "run me"
-echo "pip install pillow==6.2.1"
 if [ 1 == 1 ]; then
    #cd /home/workspace
    #cd CarND-Capstone

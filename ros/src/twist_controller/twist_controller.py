@@ -23,7 +23,7 @@ class Controller(object):
         
         # hyperparameters chosen according to lesson 7
         # https://youtu.be/kdfXo6atphY?t=317
-        self.throttle_controller = PID(0.3, 0.1, 0.0, 0.0, 0.2)
+        self.throttle_controller = PID(0.3, 0.1, 0.0, 0.0, 0.4) # PID.max=0.2
         
         self.yaw_controller = YawController( wheel_base,
                 steer_ratio,
@@ -55,7 +55,7 @@ class Controller(object):
         # https://youtu.be/kdfXo6atphY?t=472
         if linear_vel == 0.0 and current_vel < 0.1:
             throttle = 0.0
-            brake = 400 # N*m - to hols the car in place if we are stopped at a light. Accel. ~ 1m/s^2
+            brake = 700 # N*m - to hols the car in place if we are stopped at a light. Accel. ~ 1m/s^2
         elif throttle < 0.1 and velocity_error < 0.0:
             throttle = 0.0
             decel = max( velocity_error, self.decel_limit )
