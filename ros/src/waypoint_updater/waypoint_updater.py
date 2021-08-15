@@ -71,7 +71,7 @@ class WaypointUpdater(object):
         lane = Lane()
         lane.waypoints = temp_base_waypoints
         if closest_idx != self.current_wp_idx:
-            rospy.logerr( '{:5d}/{:5d}/{:5d}/{:5.2f}/{:5.2f}'.format(
+            rospy.loginfo( '{:5d}/{:5d}/{:5d}/{:5.2f}/{:5.2f}'.format(
                             closest_idx,
                             len(self.base_waypoints.waypoints),
                             self.stopline_wp_idx,
