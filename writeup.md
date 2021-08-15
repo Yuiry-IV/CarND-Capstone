@@ -8,14 +8,15 @@ Self-Driving Car Engineer Nanodegree Program [![Udacity - Self-Driving Car NanoD
 
 Project must meet the [rubrics from here](https://review.udacity.com/#!/rubrics/3058/view).
 
-![](./images/stop_on_red.png)
 
 | |Criteria| Result |
 |--------|--------|--------|
-|**Running the Code**|The code is built successfully and connects to the simulator.| [![](./images/R001_th.png)](./images/R001.png) |
-|**Control and Planning**|Waypoints are published to plan Carla’s route around the track.| [![](./images/R002_th.png)](./images/R002.png) |
-|**Control and Planning**|Controller commands are published to operate Carla’s throttle, brake, and steering.| [![](./images/R003_01_th.png)](./images/R003_01.png) [![](./images/R003_02_th.png)](./images/R003_02.png) [![](./images/R003_03_th.png)](./images/R003_03.png) |
-|**Successful Navigation**|Successfully navigate the full track more than once.| ![2nd lap](./images/2nd_lap.png) |
+|**Running the Code** :ok: |The code is built successfully and connects to the simulator.| [![](./images/R001_th.png)](./images/R001.png) |
+|**Control and Planning** :ok: |Waypoints are published to plan Carla’s route around the track.| [![](./images/R002_th.png)](./images/R002.png) |
+|**Control and Planning** :ok: |Controller commands are published to operate Carla’s throttle, brake, and steering.| [![](./images/R003_01_th.png)](./images/R003_01.png) [![](./images/R003_02_th.png)](./images/R003_02.png) [![](./images/R003_03_th.png)](./images/R003_03.png) |
+|**Successful Navigation** :ok: |Successfully navigate the full track more than once.| ![2nd lap](./images/2nd_lap.png) |
+
+![Car able to stop on red traffic light](./images/stop_on_red.png)
 
 ## Solution description
 
