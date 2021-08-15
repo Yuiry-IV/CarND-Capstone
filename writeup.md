@@ -58,3 +58,7 @@ Another thing that according to project requirements only red traffic light need
 According to this and considering that VM resources are to low I decide use this naive implementation in project that drive with simulator, see: ``` ros/src/tl_detector/light_classification/tl_classifier.py ``` lines 17-18
 
 Corresponded traffic light waypoint detected according to algorithm that decribed in lesson 4 Waypoint updater node, see: ``` ros/src/tl_detector/tl_detector.py ``` lines 163-176
+
+
+
+Project has been implemented by Yuriy Ivanov.
